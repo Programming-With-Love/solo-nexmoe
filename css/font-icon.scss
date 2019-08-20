@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1360421 */
+  src: url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.eot');
+  src: url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1360421_k2bpsr9f96n.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.solo-list:before {
+  content: "\e643";
+}
+
+.solo-about:before {
+  content: "\e61c";
+}
+
+.solo-github:before {
+  content: "\e64a";
+}
+
+.solo-home:before {
+  content: "\e600";
+}
+
+.solo-tag:before {
+  content: "\e66d";
+}
+
+.solo-calendarl:before {
+  content: "\e735";
+}
+
+.solo-search:before {
+  content: "\e736";
+}
+
+.solo-rss:before {
+  content: "\e621";
+}
+
+.solo-category:before {
+  content: "\e7a7";
+}
+
+.solo-left:before {
+  content: "\e7a8";
+}
+
+.solo-right:before {
+  content: "\e650";
+}
