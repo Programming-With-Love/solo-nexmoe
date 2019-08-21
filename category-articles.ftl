@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <@head title="${tagLabel}:${tag.tagTitle} - ${blogTitle}">
+    <@head title="${category.categoryTitle} - ${blogTitle}">
         <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
 <#--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">-->

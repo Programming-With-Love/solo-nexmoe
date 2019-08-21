@@ -37,7 +37,7 @@
         </div>
     </div>
     <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
-        <a class="active nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
             <i class="mdui-list-item-icon iconfont solo-home"></i>
             <div class="mdui-list-item-content">回到首页</div>
         </a>
@@ -78,7 +78,7 @@
                         <#list mostUsedCategories as category>
                             <li class="category-list-item">
                                 <a class="category-list-link mdui-ripple" href="${servePath}/category/${category.categoryURI}"
-                                   title="${category.categoryTitle})">
+                                   title="${category.categoryTitle} - ${blogTitle}">
                                     ${category.categoryTitle}</a>
                                 <span class="category-list-count">${category.categoryTagCnt}</span>
                             </li>
@@ -91,9 +91,8 @@
             <div class="nexmoe-widget-wrap">
                 <h3 class="nexmoe-widget-title">${tagLabel}</h3>
                 <div class="nexmoe-widget tagcloud">
-
                     <#list mostUsedTags as tag>
-                        <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="mdui-ripple">
+                        <a rel="tag" title="${tagLabel}:${tag.tagTitle} - ${blogTitle}" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="mdui-ripple">
                             ${tag.tagTitle}</a>
                     </#list>
                 </div>
@@ -109,11 +108,11 @@
                         <li class="category-list-item">
                             <#if "en" == localeString?substring(0, 2)>
                                 <a class="category-list-link mdui-ripple"  href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
-                                   title="${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})">
+                                   title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
                                     ${archiveDate.monthName} ${archiveDate.archiveDateYear}</a><span class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
                             <#else>
                                 <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
-                                   title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})">
+                                   title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
                                     ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}</a><span class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
                             </#if>
                         </li>

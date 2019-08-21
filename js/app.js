@@ -37,14 +37,14 @@ const getRealPath = (pathname, desc = false) => {
     }
     return "/";
 };
-let links = document.querySelectorAll(".nexmoe-list-item");
-let rootRealPath = getRealPath(window.location.pathname, true);
-for (let link of links) {
-    let linkPath = link.getAttribute("href");
-    if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
-        link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
-    }
-}
+// let links = document.querySelectorAll(".nexmoe-list-item");
+// let rootRealPath = getRealPath(window.location.pathname, true);
+// for (let link of links) {
+//     let linkPath = link.getAttribute("href");
+//     if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
+//         link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
+//     }
+// }
 $("table")
     .has("img")
     .addClass("nexmoe-album");
