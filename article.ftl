@@ -1,5 +1,5 @@
 <#include "../../common-template/macro-common_head.ftl">
-<#--<#include "macro-comments.ftl">-->
+<#include "macro-comments.ftl">
 <#include "../../common-template/macro-comment_script.ftl">
 <!DOCTYPE html>
 <html>
@@ -7,10 +7,7 @@
     <@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
         <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-    <#--            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">-->
-    <#--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
-        <link rel="stylesheet"
-              href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
     </@head>
 </head>
 <body class="mdui-drawer-body-left mdui-loaded">
@@ -27,7 +24,7 @@
             <div class="nexmoe-post">
                 <div class="nexmoe-post-cover">
                     <img src="${article.articleImg1URL}" alt="${article.articleTitle}"
-                         data-src="/images/5c3aec85a4343.jpg" class=" ls-is-cached lazyloaded"
+                         data-src="${article.articleImg1URL}" class=" ls-is-cached lazyloaded"
                          referrerpolicy="no-referrer">
                     <h1>${article.articleTitle}</h1>
                 </div>
@@ -72,6 +69,9 @@
                     <#include "../../common-template/toc.ftl"/>
                 </#if>
             </div>
+            <div class="nexmoe-comment">
+                <@comments commentList=articleComments article=article></@comments>
+            </div>
             <#if pjax><!---- pjax {#pjax} end ----></#if>
         </main>
 
@@ -80,8 +80,11 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
+        <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
     </div>
 </div>
 <#include "footer.ftl">
+<@comment_script oId=article.oId commentable=article.commentable>
+</@comment_script>
 </body>
 </html>

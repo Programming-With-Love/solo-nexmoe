@@ -37,14 +37,7 @@ const getRealPath = (pathname, desc = false) => {
     }
     return "/";
 };
-// let links = document.querySelectorAll(".nexmoe-list-item");
-// let rootRealPath = getRealPath(window.location.pathname, true);
-// for (let link of links) {
-//     let linkPath = link.getAttribute("href");
-//     if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
-//         link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
-//     }
-// }
+
 $("table")
     .has("img")
     .addClass("nexmoe-album");
@@ -56,12 +49,6 @@ $("#nexmoe-content img").each(function() {
     $(this).attr("referrerPolicy", "no-referrer");
 });
 
-$("article:not(.nexmoe-py) img").each(function() {
-    var element = document.createElement("a");
-    $(element).attr("data-fancybox", "gallery");
-    $(element).attr("href", $(this).attr("data-src"));
-    $(this).wrap(element);
-});
 
 $("#nexmoe-sidebar a").addClass("mdui-ripple");
 mdui.mutation();

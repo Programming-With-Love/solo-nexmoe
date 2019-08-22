@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
 <#--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">-->
 <#--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">-->
-        <link rel="stylesheet"
-              href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
     </@head>
 </head>
 <body class="mdui-drawer-body-left mdui-loaded">
@@ -31,6 +30,7 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
+        <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
     </div>
 </div>
 <#include "footer.ftl">
