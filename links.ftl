@@ -24,15 +24,14 @@
             <article class="links nexmoe-py">
                 <h2>${linkLabel}</h2>
                 <#if 0 != links?size>
-                    <ul>
                         <#list links as link>
-                            <li>
-                                <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
+                            <div class="other__item">
+                                <a href="${link.linkAddress}" target="_blank"
                                    rel="noopener">
-                                    <img src="${faviconAPI}<#list link.linkAddress?split('/') as x><#if x_index=2>${x}<#break></#if></#list>"
-                                            alt="${link.linkDescription}">
+                                    ${link.linkTitle}
                                 </a>
-                            </li>
+                                <div>${link.linkDescription}</div>
+                            </div>
                         </#list>
                     </ul>
                 </#if>
