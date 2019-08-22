@@ -33,7 +33,7 @@
                 <div class="mdui-list-item-content">${page.pageTitle}</div>
             </a>
         </#list>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/search.html" title="搜索">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/search" title="搜索">
             <i class="mdui-list-item-icon iconfont solo-search"></i>
             <div class="mdui-list-item-content">搜索</div>
         </a>
