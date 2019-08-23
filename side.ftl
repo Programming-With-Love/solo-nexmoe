@@ -138,7 +138,7 @@
         © ${year} <a href="${servePath}">${blogTitle}</a> <br/>
         ${footerContent} <br>
         Powered by <a href="https://solo.b3log.org" target="_blank">Solo</a> <br>
-        Theme <a rel="friend" href="https://github.com/JinJianh/solo-star" target="_blank">${skinDirName}</a>
+        Theme <a rel="friend" href="https://github.com/JinJianh/solo-nexmoe" target="_blank">${skinDirName}</a>
         by <a rel="friend" href="https://www.jinjianh.com" target="_blank">JinJian</a>
     </div>
 </div>
