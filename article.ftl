@@ -7,7 +7,8 @@
     <@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
         <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
+        <link rel="stylesheet"
+              href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
     </@head>
 </head>
 <body class="mdui-drawer-body-left mdui-loaded">
@@ -69,9 +70,7 @@
                     <#include "../../common-template/toc.ftl"/>
                 </#if>
             </div>
-            <div class="nexmoe-comment">
-                <@comments commentList=articleComments article=article></@comments>
-            </div>
+            <@comments commentList=articleComments article=article></@comments>
             <#if pjax><!---- pjax {#pjax} end ----></#if>
         </main>
 
