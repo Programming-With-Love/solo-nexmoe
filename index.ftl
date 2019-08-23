@@ -30,7 +30,7 @@
         </#if>
         <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
     </div>
-</div>;
+</div>
 <#include "footer.ftl">
 </body>
 </html>
