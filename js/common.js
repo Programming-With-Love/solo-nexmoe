@@ -66,12 +66,12 @@ var Skin = {
     _initToc: function () {
         // 删除重复头图问题
         let headerImg = $(".nexmoe-post-cover img:eq(0)").attr("data-src")
-        let firstImg = $("article img:eq(0)").attr("data-src")
+        let firstP = $("article p:eq(0) img:eq(0)").attr("data-src")
 
-        if (firstImg == undefined) {
-            firstImg = $("article img:eq(0)").attr("src")
+        if (firstP == undefined) {
+            firstP = $("article p:eq(0) img:eq(0)").attr("src")
         }
-        if (headerImg == firstImg) {
+        if (headerImg == firstP) {
             $("article img:eq(0)").parent().remove()
         }
 
