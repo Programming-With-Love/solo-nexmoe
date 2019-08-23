@@ -9,12 +9,12 @@
             ${statistic.statisticPublishedBlogArticleCount}
         </div>
         <div>
-            <span>${tagLabel}</span>
-            ${mostUsedTags?size}
+            <span>${commentLabel}</span>
+            ${statistic.statisticPublishedBlogCommentCount}
         </div>
         <div>
-            <span>${categoryLabel}</span>
-            ${mostUsedCategories?size}
+            <span>${viewLabel}</span>
+            ${statistic.statisticBlogViewCount}
         </div>
     </div>
     <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -26,6 +26,10 @@
             <i class="mdui-list-item-icon iconfont solo-list"></i>
             <div class="mdui-list-item-content">${linkLabel}</div>
         </a>
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/tags.html" title="${tagLabel} - ${blogTitle}">
+            <i class="mdui-list-item-icon iconfont solo-tags"></i>
+            <div class="mdui-list-item-content">${tagLabel}</div>
+        </a>
         <#list pageNavigations as page>
             <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${page.pagePermalink}"
                title="${page.pageTitle}">
@@ -33,31 +37,36 @@
                 <div class="mdui-list-item-content">${page.pageTitle}</div>
             </a>
         </#list>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/search" title="搜索">
-            <i class="mdui-list-item-icon iconfont solo-search"></i>
-            <div class="mdui-list-item-content">搜索</div>
-        </a>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/rss.xml" title="RSS">
-            <i class="mdui-list-item-icon iconfont solo-rss"></i>
-            <div class="mdui-list-item-content">RSS</div>
-        </a>
-        <#if isLoggedIn>
-            <a class="nexmoe-list-item mdui-list-item mdui-ripple"  href="${servePath}/admin-index.do#main" title="${adminLabel}">
-                <i class="mdui-list-item-icon iconfont solo-spin"></i>
-                <div class="mdui-list-item-content">${adminLabel}</div>
-            </a>
-            <a class="nexmoe-list-item mdui-list-item mdui-ripple"  href="${logoutURL}" title="${logoutLabel}">
-                <i class="mdui-list-item-icon iconfont solo-logout"></i>
-                <div class="mdui-list-item-content">${logoutLabel}</div>
-            </a>
-        <#else>
-            <a class="nexmoe-list-item mdui-list-item mdui-ripple"  href="${servePath}/start" title="${startToUseLabel}">
-                <i class="mdui-list-item-icon iconfont solo-login"></i>
-                <div class="mdui-list-item-content"> ${startToUseLabel}</div>
-            </a>
-        </#if>
     </ul>
     <aside id="nexmoe-sidebar">
+
+        <div class="nexmoe-widget-wrap">
+            <h3 class="nexmoe-widget-title">功能按钮</h3>
+            <div class="nexmoe-widget nexmoe-social features">
+                <a href="/search" title="搜索">
+                    <i class="mdui-list-item-icon iconfont solo-search"></i>
+                    <div class="mdui-list-item-content">搜索</div>
+                </a>
+                <a href="/rss.xml" title="RSS">
+                    <i class="mdui-list-item-icon iconfont solo-rss"></i>
+                </a>
+                <#if isLoggedIn>
+                    <a href="${servePath}/admin-index.do#main"
+                       title="${adminLabel}">
+                        <i class="mdui-list-item-icon iconfont solo-spin"></i>
+                    </a>
+                    <a href="${logoutURL}" title="${logoutLabel}">
+                        <i class="mdui-list-item-icon iconfont solo-logout"></i>
+                    </a>
+                <#else>
+                    <a href="${servePath}/start" title="${startToUseLabel}">
+                        <i class="mdui-list-item-icon iconfont solo-login"></i>
+                        <div class="mdui-list-item-content"> ${startToUseLabel}</div>
+                    </a>
+                </#if>
+            </div>
+        </div>
+
         <div class="nexmoe-widget-wrap">
             <h3 class="nexmoe-widget-title">社交按钮</h3>
             <div class="nexmoe-widget nexmoe-social">
@@ -97,30 +106,32 @@
             </div>
         </#if>
         <#if 0 != archiveDates?size>
-        <div class="nexmoe-widget-wrap">
-            <h3 class="nexmoe-widget-title">${archiveLabel}</h3>
-            <div class="nexmoe-widget">
-                <ul class="category-list">
-                    <#list archiveDates as archiveDate>
-                        <#if archiveDate_index < 10>
-                            <li class="category-list-item">
-                                <#if "en" == localeString?substring(0, 2)>
-                                    <a class="category-list-link mdui-ripple"
-                                       href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
-                                       title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
-                                        ${archiveDate.monthName} ${archiveDate.archiveDateYear}</a><span
-                                        class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
-                                <#else>
-                                    <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
-                                       title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
-                                        ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}</a>
-                                    <span class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
-                                </#if>
-                            </li>
-                        </#if>
-                    </#list>
-                </ul>
-                </#if>
+            <div class="nexmoe-widget-wrap">
+                <h3 class="nexmoe-widget-title">${archiveLabel}</h3>
+                <div class="nexmoe-widget">
+                    <ul class="category-list">
+                        <#list archiveDates as archiveDate>
+                            <#if archiveDate_index < 10>
+                                <li class="category-list-item">
+                                    <#if "en" == localeString?substring(0, 2)>
+                                        <a class="category-list-link mdui-ripple"
+                                           href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                                           title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
+                                            ${archiveDate.monthName} ${archiveDate.archiveDateYear}</a><span
+                                            class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
+                                    <#else>
+                                        <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                                           title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
+                                            ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}</a>
+                                        <span class="category-list-count">${archiveDate.archiveDatePublishedArticleCount}</span>
+                                    </#if>
+                                </li>
+                            </#if>
+                        </#list>
+                    </ul>
+                </div>
+            </div>
+        </#if>
 
     </aside>
     <div class="nexmoe-copyright">

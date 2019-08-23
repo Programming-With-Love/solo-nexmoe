@@ -146,6 +146,7 @@ body {
       text-align: center;
       color: #9ca2a8;
       float: left;
+      line-height: 40px;
 
       &:nth-child(7n+1) {
         background-color: rgba(255, 78, 106, 0.15);
@@ -181,6 +182,37 @@ body {
         width: 20px;
         height: 20px;
       }
+    }
+
+  }
+
+  .features a{
+    &:nth-child(7n+7) {
+      background-color: rgba(255, 78, 106, 0.15);
+    }
+
+    &:nth-child(7n+6) {
+      background-color: rgba(255, 170, 115, 0.15);
+    }
+
+    &:nth-child(7n+5) {
+      background-color: rgba(254, 212, 102, 0.15);
+    }
+
+    &:nth-child(7n+4) {
+      background-color: rgba(60, 220, 130, 0.15);
+    }
+
+    &:nth-child(7n+3) {
+      background-color: rgba(100, 220, 240, 0.15);
+    }
+
+    &:nth-child(7n+2) {
+      background-color: rgba(100, 185, 255, 0.15);
+    }
+
+    &:nth-child(7n+1) {
+      background-color: rgba(180, 180, 255, 0.15);
     }
   }
 
@@ -1319,6 +1351,60 @@ article {
     content: "";
     clear: both;
     display: block;
+  }
+
+  .tagcloud {
+    padding: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+
+    a {
+      border-radius: 15px;
+      padding: 5px 10px;
+      color: #fff;
+      font-size: 16px !important;
+      display: inline-block;
+      margin: 10px 10px 0;
+
+      &:before {
+        content: "# ";
+      }
+
+      &:nth-child(7n+1) {
+        background-color: rgba(255, 78, 106, 0.15);
+        color: rgba(255, 78, 106, 0.8);
+      }
+
+      &:nth-child(7n+2) {
+        background-color: rgba(255, 170, 115, 0.15);
+        color: #ffaa73;
+      }
+
+      &:nth-child(7n+3) {
+        background-color: rgba(254, 212, 102, 0.15);
+        color: #fed466;
+      }
+
+      &:nth-child(7n+4) {
+        background-color: rgba(60, 220, 130, 0.15);
+        color: #3cdc82;
+      }
+
+      &:nth-child(7n+5) {
+        background-color: rgba(100, 220, 240, 0.15);
+        color: #64dcf0;
+      }
+
+      &:nth-child(7n+6) {
+        background-color: rgba(100, 185, 255, 0.15);
+        color: #64b9ff;
+      }
+
+      &:nth-child(7n+7) {
+        background-color: rgba(180, 180, 255, 0.15);
+        color: #b4b4ff;
+      }
+    }
   }
 }
 
