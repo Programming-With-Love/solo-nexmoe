@@ -1,5 +1,5 @@
 <#macro comments commentList article>
-    <#if article.commentable && 0 != commentList?size>
+    <#if article.commentable || 0 != commentList?size>
         <div class="nexmoe-comment">
             <#if article.commentable>
                 <textarea rows="3" placeholder="评论内容只能为 2 到 500 个字符！" id="comment" readonly="readonly"></textarea>
