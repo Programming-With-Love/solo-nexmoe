@@ -180,8 +180,6 @@ var Skin = {
         })
     },
     initArticle: function () {
-        postSharer.init()
-
         Skin._initShare()
         Skin._initToc()
     },
