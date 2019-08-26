@@ -62,8 +62,14 @@ var Skin = {
             $('html,body').animate({scrollTop: $(_id).offset().top}, 800)
         });
 
+
     },
     _initToc: function () {
+        $(window).keydown(function (event) {
+            if (event.which == 84) {
+                Util.goTop()
+            }
+        });
         // 删除重复头图问题
         let headerImg = $(".nexmoe-post-cover img:eq(0)").attr("data-src")
         let firstP = $("article p:eq(0) img:eq(0)").attr("data-src")

@@ -52,3 +52,6 @@ $("#nexmoe-content img").each(function() {
 
 $("#nexmoe-sidebar a").addClass("mdui-ripple");
 mdui.mutation();
+
+
+
