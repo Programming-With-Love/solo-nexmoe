@@ -29,7 +29,7 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 * 此皮肤有两个版本，`master`与`temporary`，根据目前设计的方式导致友情链接页面很丑，所以就加了一个版本跟换了友情链接展示方式，当前版本请使用`temporary`下的皮肤，至于`master`所需要的东西已经反馈给D哥，进度请查看 [友情链接添加图片属性](https://github.com/b3log/solo/issues/12861)
 
 ## 小功能
-* 键盘T可直接返回顶部
+* 快捷键`T`可直接返回顶部
 * 后续添加中...
 
 ## 鸣谢
