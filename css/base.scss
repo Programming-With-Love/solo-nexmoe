@@ -1623,3 +1623,9 @@ font.douyin {
 .solo-kanbanniang {
   z-index: 99;
 }
+
+@media screen and (max-width: 1715px) {
+  .post__toc{
+    display: none!important;
+  }
+}
