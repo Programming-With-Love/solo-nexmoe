@@ -32,7 +32,7 @@
         </a>
         <#list pageNavigations as page>
             <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${page.pagePermalink}"
-               title="${page.pageTitle}">
+               title="${page.pageTitle}" target="${page.pageOpenTarget}" rel="section">
                 <i class="mdui-list-item-icon iconfont solo-${page.pageIcon}"></i>
                 <div class="mdui-list-item-content">${page.pageTitle}</div>
             </a>
