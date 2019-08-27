@@ -38,11 +38,31 @@ const getRealPath = (pathname, desc = false) => {
     return "/";
 };
 
+const GetUrlRelativePath = (url) => {
+    let arrUrl = url.split("//");
+    let l = arrUrl.length
+    let relUrl = ""
+    if (l < 2) {
+        relUrl = arrUrl[l - 1]
+    } else {
+        let start = arrUrl[1].indexOf("/");
+        relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+        if (relUrl.indexOf("?") != -1) {
+            relUrl = relUrl.split("?")[0];
+        }
+    }
+    if (relUrl.substr(0, 1) == "/" && relUrl != "/") {
+        relUrl = relUrl.slice(1)
+    }
+    return relUrl
+}
+
 $("table")
     .has("img")
     .addClass("nexmoe-album");
 
-$("#nexmoe-content img").each(function() {
+$("#nexmoe-content img").each(function () {
     $(this).attr("data-src", $(this).attr("src"));
     $(this).attr("src", "");
     $(this).addClass("lazyload");

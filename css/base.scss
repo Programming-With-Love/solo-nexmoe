@@ -38,6 +38,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  margin-left: calc(100vw - 100%) !important;
+}
+
 body {
   max-width: 1200px;
   margin: auto !important;
@@ -186,7 +190,7 @@ body {
 
   }
 
-  .features a{
+  .features a {
     &:nth-child(7n+7) {
       background-color: rgba(255, 78, 106, 0.15);
     }
@@ -474,28 +478,29 @@ body {
             border-radius: 0;
             border: none;
           }
-          a{
+
+          a {
             &::after {
-            font-size: 13px;
-            color: #606266;
-            -webkit-transition: none;
-            transition: none;
-            content: attr(title);
-            display: block;
-            position: relative;
-            width: 100%;
-            border: none;
-            padding: 3px 10px 5px 10px;
-            margin-top: -2px;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+              font-size: 13px;
+              color: #606266;
+              -webkit-transition: none;
+              transition: none;
+              content: attr(title);
+              display: block;
+              position: relative;
+              width: 100%;
+              border: none;
+              padding: 3px 10px 5px 10px;
+              margin-top: -2px;
+              text-align: center;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
           }
         }
       }
     }
-  }
   }
 
   .nexmoe-posts {
@@ -1601,17 +1606,20 @@ font.douyin {
     }
   }
 }
+
 //temporary
-.other__item{
+.other__item {
   line-height: 20px;
   margin: 20px 35px 0 35px;
   white-space: nowrap;
   display: block;
   word-break: break-all;
-  div{
+
+  div {
     margin-top: 2px;
   }
 }
-.solo-kanbanniang{
+
+.solo-kanbanniang {
   z-index: 99;
 }

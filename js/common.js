@@ -82,10 +82,11 @@ var Skin = {
         }
 
         let links = document.querySelectorAll(".nexmoe-list-item");
-        let rootRealPath = getRealPath(window.location.pathname, true);
+        let rootRealPath = GetUrlRelativePath(window.location.pathname);
         for (let link of links) {
             let linkPath = link.getAttribute("href");
-            if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
+            linkPath = GetUrlRelativePath(linkPath)
+            if (linkPath && linkPath === rootRealPath) {
                 link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
             } else {
                 link.className = "nexmoe-list-item mdui-list-item mdui-ripple";
