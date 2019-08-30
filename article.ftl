@@ -53,7 +53,7 @@
                         <i class="nexmoefont iconfont solo-calendarl"></i>${article.articleUpdateDate?string("yyyy年MM月dd日")}
                     </a>
                     <a>
-                        <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount}°C
+                        <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
                     </a>
                     <#if article.articleCommentCount != 0>
                         <a href="${servePath}${article.articlePermalink}#comments">
