@@ -36,7 +36,7 @@
                     <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
                 </a>
                 <#if article.articleCommentCount != 0>
-                    <a href="${servePath}${article.articlePermalink}">
+                    <a>
                         <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
                     </a>
                 </#if>
