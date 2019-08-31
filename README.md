@@ -14,7 +14,7 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 * [金戋博客](https://www.jinjianh.com/?skin=solo-nexmoe)
 * [鼠鼠在碎觉](https://sszsj.cc:444/?skin=solo-nexmoe)
 * [记录精彩的人生](https://witheloov.com/?skin=solo-nexmoe)
-* [ZEEKLING](https://blog.zeekling.cn/)
+* [ZEEKLING](https://blog.zeekling.cn/?skin=solo-nexmoe)
 * ...
 
 欢迎将你的博客加入这里
