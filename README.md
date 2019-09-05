@@ -1,13 +1,15 @@
- ![1](https://user-images.githubusercontent.com/23192332/64356252-1c690700-d035-11e9-8df6-0e535eee41ec.png)
+![image-ef3e7eed](https://user-images.githubusercontent.com/23192332/64356995-61416d80-d036-11e9-9361-65bae4b79a06.png)
 ## solo-nexmoe
 ![](https://img.shields.io/github/languages/code-size/Jinjianh/solo-nexmoe) &nbsp; ![](https://img.shields.io/github/languages/count/Jinjianh/solo-nexmoe) &nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/Jinjianh/solo-nexmoe)
 ## 简介
 solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-nexmoe)而得到的，皮肤效果基本与原作者一致
 
 ## 效果展示
-![image](https://user-images.githubusercontent.com/23192332/64356316-3d315c80-d035-11e9-9f4b-c6944ef4c447.png)
-![image](https://user-images.githubusercontent.com/23192332/64356375-5b975800-d035-11e9-9296-4668801b2f3f.png)
-![image](https://user-images.githubusercontent.com/23192332/64356471-84b7e880-d035-11e9-87cb-a264117efa0f.png)
+
+![image-0f32e4c2](https://user-images.githubusercontent.com/23192332/64356996-61416d80-d036-11e9-9e2b-d7ac13602d6a.png)
+![image-4ff20186](https://user-images.githubusercontent.com/23192332/64356998-61da0400-d036-11e9-9f17-0e329d2e1fa9.png)
+![image-9386c650](https://user-images.githubusercontent.com/23192332/64356999-61da0400-d036-11e9-970e-abd44de2a70c.png)
+
 ## 演示
 
 * [墨殇的技术博客](https://www.jinjianh.com/?skin=solo-nexmoe)
