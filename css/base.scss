@@ -15,13 +15,24 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+
+@import "../../../scss/reset";
 @import "../../../scss/nprogress";
 @import "../../../scss/usite";
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
 
+
+$red: #ff4e6a !default;
+$bdcorlor: #eee !default;
+
 *, ::after, ::before {
   box-sizing: border-box;
+}
+
+
+a:hover{
+  text-decoration: none
 }
 
 svg {
@@ -33,6 +44,10 @@ svg {
 
 a {
   text-decoration: none;
+}
+
+html {
+  margin-left: calc(100vw - 100%) !important;
 }
 
 body {
@@ -143,6 +158,7 @@ body {
       text-align: center;
       color: #9ca2a8;
       float: left;
+      line-height: 40px;
 
       &:nth-child(7n+1) {
         background-color: rgba(255, 78, 106, 0.15);
@@ -179,6 +195,37 @@ body {
         height: 20px;
       }
     }
+
+  }
+
+  .features a {
+    &:nth-child(7n+7) {
+      background-color: rgba(255, 78, 106, 0.15);
+    }
+
+    &:nth-child(7n+6) {
+      background-color: rgba(255, 170, 115, 0.15);
+    }
+
+    &:nth-child(7n+5) {
+      background-color: rgba(254, 212, 102, 0.15);
+    }
+
+    &:nth-child(7n+4) {
+      background-color: rgba(60, 220, 130, 0.15);
+    }
+
+    &:nth-child(7n+3) {
+      background-color: rgba(100, 220, 240, 0.15);
+    }
+
+    &:nth-child(7n+2) {
+      background-color: rgba(100, 185, 255, 0.15);
+    }
+
+    &:nth-child(7n+1) {
+      background-color: rgba(180, 180, 255, 0.15);
+    }
   }
 
   .nexmoe-list {
@@ -200,8 +247,8 @@ body {
         }
 
         opacity: .9;
-        background: #ff4e6a;
-        box-shadow: 0 2px 12px #ff4e6a;
+        background: $red;
+        box-shadow: 0 2px 12px $red;
       }
 
       i {
@@ -228,7 +275,7 @@ body {
       font-size: 1.2em;
       font-weight: 400;
       padding: 12px 10px 10px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $bdcorlor;
       margin: 0;
     }
 
@@ -242,7 +289,7 @@ body {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid $bdcorlor;
           position: relative;
 
           a {
@@ -410,9 +457,9 @@ body {
 
       .current {
         color: #fff;
-        background: #ff4e6a;
+        background: $red;
         opacity: .9;
-        box-shadow: 0 2px 12px #ff4e6a;
+        box-shadow: 0 2px 12px $red;
       }
     }
 
@@ -430,7 +477,7 @@ body {
           width: calc(12.5% - 10px);
           margin: 5px;
           border-radius: 4px;
-          border: 1px solid #eee;
+          border: 1px solid $bdcorlor;
           font-size: 0;
           overflow: hidden;
 
@@ -439,28 +486,29 @@ body {
             border-radius: 0;
             border: none;
           }
-          a{
+
+          a {
             &::after {
-            font-size: 13px;
-            color: #606266;
-            -webkit-transition: none;
-            transition: none;
-            content: attr(title);
-            display: block;
-            position: relative;
-            width: 100%;
-            border: none;
-            padding: 3px 10px 5px 10px;
-            margin-top: -2px;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+              font-size: 13px;
+              color: #606266;
+              -webkit-transition: none;
+              transition: none;
+              content: attr(title);
+              display: block;
+              position: relative;
+              width: 100%;
+              border: none;
+              padding: 3px 10px 5px 10px;
+              margin-top: -2px;
+              text-align: center;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
           }
         }
       }
     }
-  }
   }
 
   .nexmoe-posts {
@@ -499,7 +547,7 @@ body {
       margin-bottom: 10px;
       max-height: 500px;
       min-height: 65px;
-      background-color: #eee;
+      background-color: $bdcorlor;
 
       img {
         width: 100%;
@@ -564,7 +612,7 @@ body {
 
       a {
         &:nth-child(7n+1) {
-          background-color: #ff4e6a;
+          background-color: $red;
         }
 
         &:nth-child(7n+2) {
@@ -600,7 +648,7 @@ body {
       padding: 20px;
       color: #666;
       background-color: #f8f8f8;
-      border-left: 2px solid #eee;
+      border-left: 2px solid $bdcorlor;
       line-height: 1.5em;
       position: relative;
 
@@ -617,11 +665,11 @@ body {
         padding: 2px;
         height: 30px;
         width: 30px;
-        border: 1px solid #eee;
+        border: 1px solid $bdcorlor;
       }
 
       a {
-        color: #ff4e6a;
+        color: $red;
       }
 
       hr, br:last-child {
@@ -652,7 +700,7 @@ body {
       width: 100%;
       box-sizing: border-box;
       outline: none;
-      border: 1px solid #eee;
+      border: 1px solid $bdcorlor;
     }
 
     #comments {
@@ -834,7 +882,7 @@ body {
     line-height: 24px;
 
     li.current a {
-      color: #ff4e6a;
+      color: $red;
     }
 
     a {
@@ -843,7 +891,7 @@ body {
       margin-top: -24px;
 
       &:hover {
-        color: #ff4e6a;
+        color: $red;
       }
     }
   }
@@ -972,13 +1020,13 @@ article {
   a {
     -webkit-transition: all .35s;
     transition: all .35s;
-    color: #ff4e6a;
+    color: $red;
     text-decoration: none;
     position: relative;
     word-wrap: break-word;
 
     &:focus, &:hover {
-      color: #ff4e6a;
+      color: $red;
     }
 
     &::after {
@@ -1042,7 +1090,7 @@ article {
   img {
     display: block;
     border-radius: 6px;
-    border: 1px solid #eee;
+    border: 1px solid $bdcorlor;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -1058,7 +1106,7 @@ article {
     display: inline-block;
     width: 1em;
     content: '#';
-    color: #ff4e6a;
+    color: $red;
   }
 
   h1 {
@@ -1072,7 +1120,7 @@ article {
 
     &:before {
       content: "";
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $bdcorlor;
       position: absolute;
       bottom: -1px;
       left: -20px;
@@ -1178,8 +1226,8 @@ article {
     border-spacing: 0;
     text-align: center;
     border-collapse: collapse !important;
-    -webkit-box-shadow: 0 0 0 1px #eee;
-    box-shadow: 0 0 0 1px #eee;
+    -webkit-box-shadow: 0 0 0 1px $bdcorlor;
+    box-shadow: 0 0 0 1px $bdcorlor;
     display: inline-block;
     max-width: 100%;
     overflow: auto;
@@ -1197,7 +1245,7 @@ article {
     }
 
     thead {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $bdcorlor;
       background-color: #f8f8f8;
 
       tr {
@@ -1206,14 +1254,14 @@ article {
     }
 
     th {
-      border-right: 1px solid #eee;
+      border-right: 1px solid $bdcorlor;
       padding: 13px 26px;
       font-weight: 400;
       background-color: #f8f8f8 !important;
     }
 
     td, th {
-      border: 1px solid #eee !important;
+      border: 1px solid $bdcorlor !important;
       padding: 13px 26px !important;
 
       &:last-child {
@@ -1234,7 +1282,7 @@ article {
     }
   }
 
-  canvas, iframe, img, select, textarea, video {
+  canvas, img, select, textarea, video {
     width: auto;
     max-width: 100%;
   }
@@ -1269,8 +1317,8 @@ article {
     overflow: hidden;
     display: inline-block;
     border-radius: 6px;
-    -webkit-box-shadow: 0 0 0 1px #eee;
-    box-shadow: 0 0 0 1px #eee;
+    -webkit-box-shadow: 0 0 0 1px $bdcorlor;
+    box-shadow: 0 0 0 1px $bdcorlor;
   }
 
   .catui-pic-2 p {
@@ -1317,11 +1365,65 @@ article {
     clear: both;
     display: block;
   }
+
+  .tagcloud {
+    padding: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+
+    a {
+      border-radius: 15px;
+      padding: 5px 10px;
+      color: #fff;
+      font-size: 16px !important;
+      display: inline-block;
+      margin: 10px 10px 0;
+
+      &:before {
+        content: "# ";
+      }
+
+      &:nth-child(7n+1) {
+        background-color: rgba(255, 78, 106, 0.15);
+        color: rgba(255, 78, 106, 0.8);
+      }
+
+      &:nth-child(7n+2) {
+        background-color: rgba(255, 170, 115, 0.15);
+        color: #ffaa73;
+      }
+
+      &:nth-child(7n+3) {
+        background-color: rgba(254, 212, 102, 0.15);
+        color: #fed466;
+      }
+
+      &:nth-child(7n+4) {
+        background-color: rgba(60, 220, 130, 0.15);
+        color: #3cdc82;
+      }
+
+      &:nth-child(7n+5) {
+        background-color: rgba(100, 220, 240, 0.15);
+        color: #64dcf0;
+      }
+
+      &:nth-child(7n+6) {
+        background-color: rgba(100, 185, 255, 0.15);
+        color: #64b9ff;
+      }
+
+      &:nth-child(7n+7) {
+        background-color: rgba(180, 180, 255, 0.15);
+        color: #b4b4ff;
+      }
+    }
+  }
 }
 
 .aplayer {
-  -webkit-box-shadow: 0 0 0 1px #eee !important;
-  box-shadow: 0 0 0 1px #eee !important;
+  -webkit-box-shadow: 0 0 0 1px $bdcorlor !important;
+  box-shadow: 0 0 0 1px $bdcorlor !important;
   border-radius: 6px !important;
   margin: 20px 0 !important;
 
@@ -1383,12 +1485,12 @@ article {
 }
 
 article .mdui-btn {
-  background-color: #ff4e6a;
+  background-color: $red;
   color: #fff;
   border-radius: 6px;
 
   &:focus, &:hover {
-    background-color: #ff4e6a;
+    background-color: $red;
     color: #fff;
   }
 }
@@ -1488,7 +1590,7 @@ font.douyin {
     &:before {
       content: "";
       width: calc(100% + 40px);
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $bdcorlor;
       position: absolute;
       bottom: -1px;
       left: -20px;
@@ -1510,5 +1612,28 @@ font.douyin {
     &:hover:after {
       width: 2em;
     }
+  }
+}
+
+//temporary
+.other__item {
+  line-height: 20px;
+  margin: 20px 35px 0 35px;
+  white-space: nowrap;
+  display: block;
+  word-break: break-all;
+
+  div {
+    margin-top: 2px;
+  }
+}
+
+.solo-kanbanniang {
+  z-index: 99;
+}
+
+@media screen and (max-width: 1715px) {
+  .post__toc{
+    display: none!important;
   }
 }

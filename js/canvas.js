@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-﻿!function() {
+!function() {
     //封装方法，压缩之后减少文件大小
     function get_attribute(node, attr, default_value) {
         return node.getAttribute(attr) || default_value;

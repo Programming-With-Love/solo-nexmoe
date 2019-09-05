@@ -62,8 +62,14 @@ var Skin = {
             $('html,body').animate({scrollTop: $(_id).offset().top}, 800)
         });
 
+
     },
     _initToc: function () {
+        $(window).keydown(function (event) {
+            if (event.which == 84) {
+                Util.goTop()
+            }
+        });
         // 删除重复头图问题
         let headerImg = $(".nexmoe-post-cover img:eq(0)").attr("data-src")
         let firstP = $("article p:eq(0) img:eq(0)").attr("data-src")
@@ -76,10 +82,11 @@ var Skin = {
         }
 
         let links = document.querySelectorAll(".nexmoe-list-item");
-        let rootRealPath = getRealPath(window.location.pathname, true);
+        let rootRealPath = GetUrlRelativePath(window.location.pathname);
         for (let link of links) {
             let linkPath = link.getAttribute("href");
-            if (linkPath && getRealPath(linkPath, true) === rootRealPath) {
+            linkPath = GetUrlRelativePath(linkPath)
+            if (linkPath && linkPath === rootRealPath) {
                 link.className = "active nexmoe-list-item mdui-list-item mdui-ripple";
             } else {
                 link.className = "nexmoe-list-item mdui-list-item mdui-ripple";
@@ -180,8 +187,6 @@ var Skin = {
         })
     },
     initArticle: function () {
-        postSharer.init()
-
         Skin._initShare()
         Skin._initToc()
     },
