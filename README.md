@@ -1,20 +1,19 @@
-![1.png](https://img.hacpai.com/file/2019/08/1-9f9ff2c4.png)  
+ ![1](https://user-images.githubusercontent.com/23192332/64356252-1c690700-d035-11e9-8df6-0e535eee41ec.png)
 ## solo-nexmoe
 ![](https://img.shields.io/github/languages/code-size/Jinjianh/solo-nexmoe) &nbsp; ![](https://img.shields.io/github/languages/count/Jinjianh/solo-nexmoe) &nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/Jinjianh/solo-nexmoe)
 ## 简介
 solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-nexmoe)而得到的，皮肤效果基本与原作者一致
 
 ## 效果展示
-![2.png](https://img.hacpai.com/file/2019/08/2-83c232bc.png)  
-![3.png](https://img.hacpai.com/file/2019/08/3-8df20024.png)  
-![4.png](https://img.hacpai.com/file/2019/08/4-e7b74046.png)
-
+![image](https://user-images.githubusercontent.com/23192332/64356316-3d315c80-d035-11e9-9f4b-c6944ef4c447.png)
+![image](https://user-images.githubusercontent.com/23192332/64356375-5b975800-d035-11e9-9296-4668801b2f3f.png)
+![image](https://user-images.githubusercontent.com/23192332/64356471-84b7e880-d035-11e9-87cb-a264117efa0f.png)
 ## 演示
 
-* [金戋博客](https://www.jinjianh.com/?skin=solo-nexmoe)
+* [墨殇的技术博客](https://www.jinjianh.com/?skin=solo-nexmoe)
 * [鼠鼠在碎觉](https://sszsj.cc:444/?skin=solo-nexmoe)
 * [记录精彩的人生](https://witheloov.com/?skin=solo-nexmoe)
-* [ZEEKLING](https://blog.zeekling.cn/?skin=solo-nexmoe)
+* [邯城往事](https://www.cjzshilong.cn/?skin=solo-nexmoe)
 * ...
 
 欢迎将你的博客加入这里
