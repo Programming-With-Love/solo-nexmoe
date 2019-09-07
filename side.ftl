@@ -132,6 +132,7 @@
                         <script>console.log(${tag})</script>
                         <a rel="tag"
                            href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
+                           title="${tagLabel}:${tag.tagTitle} - ${blogTitle}"
                            class="mdui-ripple"
                            aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
                             ${tag.tagTitle}</a>
