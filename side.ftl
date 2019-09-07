@@ -118,7 +118,6 @@
                 <h3 class="nexmoe-widget-title">${tagLabel}</h3>
                 <div class="nexmoe-widget tagcloud">
                     <#list mostUsedTags as tag>
-                        <script>console.log(${tag})</script>
                         <a rel="tag"
                            href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
                            title="${tagLabel}:${tag.tagTitle} - ${blogTitle}"
