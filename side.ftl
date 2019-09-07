@@ -112,18 +112,35 @@
                 </div>
             </div>
         </#if>
+<#--        <#if 0 != mostUsedTags?size>-->
+<#--            <div class="nexmoe-widget-wrap">-->
+<#--                <h3 class="nexmoe-widget-title">${tagLabel}</h3>-->
+<#--                <div class="nexmoe-widget tagcloud">-->
+<#--                    <#list mostUsedTags as tag>-->
+<#--                        <a rel="tag" title="标签:${tag.tagTitle} - ${blogTitle}"-->
+<#--                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="mdui-ripple">-->
+<#--                            ${tag.tagTitle}</a>-->
+<#--                    </#list>-->
+<#--                </div>-->
+<#--            </div>-->
+<#--        </#if>-->
         <#if 0 != mostUsedTags?size>
             <div class="nexmoe-widget-wrap">
                 <h3 class="nexmoe-widget-title">${tagLabel}</h3>
                 <div class="nexmoe-widget tagcloud">
                     <#list mostUsedTags as tag>
-                        <a rel="tag" title="标签:${tag.tagTitle} - ${blogTitle}"
-                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="mdui-ripple">
+                        <a rel="tag"
+                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
+                           class="mdui-ripple"
+                           aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
                             ${tag.tagTitle}</a>
                     </#list>
                 </div>
             </div>
         </#if>
+
+
+
         <#if 0 != archiveDates?size>
             <div class="nexmoe-widget-wrap">
                 <h3 class="nexmoe-widget-title">${archiveLabel}</h3>
