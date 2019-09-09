@@ -317,6 +317,13 @@ body {
         right: 10px;
         top: 10px;
       }
+
+      .links-of-author{
+        canvas, img, select, textarea, video,iframe  {
+          width: auto;
+          max-width: 100%;
+        }
+      }
     }
 
     .tagcloud {
