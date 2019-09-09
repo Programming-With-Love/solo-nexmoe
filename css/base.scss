@@ -555,6 +555,7 @@ body {
       max-height: 500px;
       min-height: 65px;
       background-color: $bdcorlor;
+      position: relative;
 
       img {
         width: 100%;
@@ -591,6 +592,14 @@ body {
           width: 100%;
           z-index: -1;
         }
+      }
+      
+      i{
+        position: absolute;
+        color: #fa8d14;
+        top: -3px;
+        right: 0;
+        font-size: 48px;
       }
     }
 

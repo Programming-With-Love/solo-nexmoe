@@ -98,7 +98,7 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
-        <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
+        <div class="back-to-top iconfont solo-gotop" onclick="Util.goTop()"></div>
     </div>
 </div>
 <#include "footer.ftl">
