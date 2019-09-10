@@ -102,7 +102,7 @@
     </div>
 </div>
 <#include "footer.ftl">
-<#--<#if pjax><!---- pjax {#pjax} start --&ndash;&gt;</#if>-->
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
     page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
@@ -117,6 +117,6 @@
     </#if>
     Skin.initArticle()
 </@comment_script>
-<#--<#if pjax><!---- pjax {#pjax} end --&ndash;&gt;</#if>-->
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
