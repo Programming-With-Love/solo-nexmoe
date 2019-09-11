@@ -26,8 +26,7 @@
     <@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
         <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-        <link rel="stylesheet"
-              href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/font-icon.css?${staticResourceVersion}">
     </@head>
 </head>
 <body class="mdui-drawer-body-left mdui-loaded">
@@ -49,14 +48,14 @@
                     <h1>${article.articleTitle}</h1>
                 </div>
                 <div class="nexmoe-post-meta">
-                    <a>
+                    <a href="#">
                         <i class="nexmoefont iconfont solo-calendarl"></i>${article.articleUpdateDate?string("yyyy年MM月dd日")}
                     </a>
-                    <a>
+                    <a href="#">
                         <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
                     </a>
                     <#if article.articleCommentCount != 0>
-                        <a>
+                        <a href="#">
                             <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
                         </a>
                     </#if>
@@ -70,7 +69,6 @@
                         <a class="nexmoefont iconfont solo-tag -link"
                            href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a>
                     </#list>
-
                 </div>
                 <article>
                     <div class="vditor-reset">
@@ -98,7 +96,7 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
-        <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
+        <div class="back-to-top iconfont solo-gotop" onclick="Util.goTop()"></div>
     </div>
 </div>
 <#include "footer.ftl">

@@ -317,6 +317,13 @@ body {
         right: 10px;
         top: 10px;
       }
+
+      .links-of-author{
+        canvas, img, select, textarea, video,iframe  {
+          width: auto;
+          max-width: 100%;
+        }
+      }
     }
 
     .tagcloud {
@@ -412,15 +419,12 @@ body {
 }
 
 #nexmoe-content {
-  position: relative;
-
   .nexmoe-primary {
     box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
     background-color: #fff;
     float: left;
     width: 100%;
-    padding: 20px 20px 56px;
-    position: absolute;
+    padding: 20px 20px 0px;
     min-height: 100vh;
 
     img {
@@ -434,7 +438,7 @@ body {
       color: #ddd;
       border-radius: 10px;
       margin-top: -10px;
-      width: 100%;
+      width: 940px;
       margin-bottom: 20px;
 
       a {
@@ -548,6 +552,7 @@ body {
       max-height: 500px;
       min-height: 65px;
       background-color: $bdcorlor;
+      position: relative;
 
       img {
         width: 100%;
@@ -584,6 +589,14 @@ body {
           width: 100%;
           z-index: -1;
         }
+      }
+      
+      i{
+        position: absolute;
+        color: #fa8d14;
+        top: -3px;
+        right: 0;
+        font-size: 48px;
       }
     }
 
@@ -822,23 +835,6 @@ body {
     }
   }
 
-  .nexmoe-hitokoto {
-    margin: 0 -20px;
-    padding: 21.5px 20px;
-    text-align: center;
-    background-color: #f5f6f5;
-    color: #777;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 56px;
-
-    #hitokoto {
-      font-size: 12px;
-      padding: 0;
-      margin: 0;
-    }
-  }
 
   .back-to-top {
     font-size: 30px;
@@ -856,6 +852,21 @@ body {
   }
 }
 
+.nexmoe-hitokoto {
+  margin: 0 -20px;
+  padding: 21.5px 20px;
+  text-align: center;
+  background-color: #f5f6f5;
+  color: #777;
+  width: 940px;
+  height: 56px;
+
+  #hitokoto {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+}
 .post__toc {
   padding-left: 3px;
   display: none;
@@ -1635,5 +1646,19 @@ font.douyin {
 @media screen and (max-width: 1715px) {
   .post__toc{
     display: none!important;
+  }
+}
+.tagBall{
+  width: 800px;
+  height: 800px;
+  margin:0px auto;
+  position: relative;
+  .tag{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: #000;
+    &:hover{border:1px solid #666;}
   }
 }

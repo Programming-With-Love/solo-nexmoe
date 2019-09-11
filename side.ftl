@@ -19,7 +19,7 @@
 -->
 <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
-        <a href="/" title="${blogTitle}">
+        <a href="${servePath}/" title="${blogTitle}">
             <img src="${adminUser.userAvatar}" title="${blogTitle}" alt="${userName}"></a>
     </div>
     <div class="nexmoe-count">
@@ -37,15 +37,17 @@
         </div>
     </div>
     <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/" title="回到首页">
             <i class="mdui-list-item-icon iconfont solo-home"></i>
             <div class="mdui-list-item-content">回到首页</div>
         </a>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/links.html" title="${linkLabel} - ${blogTitle}">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/links.html"
+           title="${linkLabel} - ${blogTitle}">
             <i class="mdui-list-item-icon iconfont solo-list"></i>
             <div class="mdui-list-item-content">${linkLabel}</div>
         </a>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/tags.html" title="${tagLabel} - ${blogTitle}">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/tags.html"
+           title="${tagLabel} - ${blogTitle}">
             <i class="mdui-list-item-icon iconfont solo-tags"></i>
             <div class="mdui-list-item-content">${tagLabel}</div>
         </a>
@@ -62,11 +64,11 @@
         <div class="nexmoe-widget-wrap">
             <h3 class="nexmoe-widget-title">功能按钮</h3>
             <div class="nexmoe-widget nexmoe-social features">
-                <a href="/search" title="搜索">
+                <a href="${servePath}/search" title="搜索">
                     <i class="mdui-list-item-icon iconfont solo-search"></i>
                     <div class="mdui-list-item-content">搜索</div>
                 </a>
-                <a href="/rss.xml" title="RSS">
+                <a href="${servePath}/rss.xml" title="RSS">
                     <i class="mdui-list-item-icon iconfont solo-rss"></i>
                 </a>
                 <#if isLoggedIn>
@@ -94,12 +96,38 @@
             </div>
         </div>
 
+        <#if noticeBoard?? && 'bulletin'== customVars.key0>
+            <div class="nexmoe-widget-wrap">
+                <h3 class="nexmoe-widget-title">公告栏</h3>
+                <div class="nexmoe-widget tagcloud">
+                    <div class="links-of-author">
+                        ${noticeBoard}
+                    </div>
+                </div>
+            </div>
+        <#elseif  0 != mostUsedTags?size>
+            <div class="nexmoe-widget-wrap">
+                <h3 class="nexmoe-widget-title">${tagLabel}</h3>
+                <div class="nexmoe-widget tagcloud">
+                    <#list mostUsedTags as tag>
+                        <a rel="tag"
+                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
+                           title="${tagLabel}:${tag.tagTitle} - ${blogTitle}"
+                           class="mdui-ripple">
+                            ${tag.tagTitle}</a>
+                    </#list>
+                </div>
+            </div>
+        </#if>
+
+
         <#if 0 != mostUsedCategories?size>
             <div class="nexmoe-widget-wrap">
                 <h3 class="nexmoe-widget-title">${categoryLabel}</h3>
                 <div class="nexmoe-widget">
                     <ul class="category-list">
                         <#list mostUsedCategories as category>
+                            <script>console.log(${category})</script>
                             <li class="category-list-item">
                                 <a class="category-list-link mdui-ripple"
                                    href="${servePath}/category/${category.categoryURI}"
@@ -112,18 +140,8 @@
                 </div>
             </div>
         </#if>
-        <#if 0 != mostUsedTags?size>
-            <div class="nexmoe-widget-wrap">
-                <h3 class="nexmoe-widget-title">${tagLabel}</h3>
-                <div class="nexmoe-widget tagcloud">
-                    <#list mostUsedTags as tag>
-                        <a rel="tag" title="${tagLabel}:${tag.tagTitle} - ${blogTitle}"
-                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="mdui-ripple">
-                            ${tag.tagTitle}</a>
-                    </#list>
-                </div>
-            </div>
-        </#if>
+
+
         <#if 0 != archiveDates?size>
             <div class="nexmoe-widget-wrap">
                 <h3 class="nexmoe-widget-title">${archiveLabel}</h3>

@@ -43,6 +43,7 @@
             <article class="links nexmoe-py">
                 <h2>${linkLabel}</h2>
                 <#if 0 != links?size>
+                    <#if 'list' != customVars.key1>
                         <#list links as link>
                             <div class="other__item">
                                 <a href="${link.linkAddress}" target="_blank"
@@ -52,7 +53,19 @@
                                 <div>${link.linkDescription}</div>
                             </div>
                         </#list>
-                    </ul>
+                    <#else>
+                        <ul>
+                            <#list links as link>
+                                <li>
+                                    <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
+                                       rel="noopener">
+                                        <img src="${faviconAPI}<#list link.linkAddress?split('/') as x><#if x_index=2>${x}<#break></#if></#list>"
+                                             alt="${link.linkDescription}">
+                                    </a>
+                                </li>
+                            </#list>
+                        </ul>
+                    </#if>
                 </#if>
             </article>
             <#if pjax><!---- pjax {#pjax} end ----></#if>
@@ -63,7 +76,7 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
-        <div class="back-to-top iconfont solo-top" onclick="Util.goTop()"></div>
+        <div class="back-to-top iconfont solo-gotop" onclick="Util.goTop()"></div>
     </div>
 </div>
 <#include "footer.ftl">
