@@ -127,6 +127,7 @@
                 <div class="nexmoe-widget">
                     <ul class="category-list">
                         <#list mostUsedCategories as category>
+                            <script>console.log(${category})</script>
                             <li class="category-list-item">
                                 <a class="category-list-link mdui-ripple"
                                    href="${servePath}/category/${category.categoryURI}"
