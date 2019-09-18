@@ -48,27 +48,33 @@
                     <h1>${article.articleTitle}</h1>
                 </div>
                 <div class="nexmoe-post-meta">
-                    <a href="#">
-                        <i class="nexmoefont iconfont solo-calendarl"></i>${article.articleUpdateDate?string("yyyy年MM月dd日")}
-                    </a>
-                    <a href="#">
-                        <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
-                    </a>
+                <span>
+                    <i class="nexmoefont iconfont solo-calendarl"></i>${article.articleUpdateDate?string("yyyy年MM月dd日")}
+                </span>
+
+                    <span>
+                    <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
+                </span>
                     <#if article.articleCommentCount != 0>
-                        <a href="#">
-                            <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
-                        </a>
+                        <span>
+                        <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
+                    </span>
                     </#if>
                     <#list article.articleTags?split(",") as articleTag>
                         <#if articleTag_index == 0>
                             <#if article.category??>
-                                <a class="nexmoefont iconfont solo-category -link"
-                                   href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
+                                <span>
+                            <a class="nexmoefont iconfont solo-category -link"
+                               href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
+                </span>
                             </#if>
                         </#if>
-                        <a class="nexmoefont iconfont solo-tag -link"
-                           href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a>
+                        <span>
+                    <a class="nexmoefont iconfont solo-tag -link"
+                       href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a>
+                </span>
                     </#list>
+
                 </div>
                 <article>
                     <div class="vditor-reset">

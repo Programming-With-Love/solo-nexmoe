@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 @import "../../../scss/reset";
 @import "../../../scss/nprogress";
 @import "../../../scss/usite";
@@ -31,7 +30,7 @@ $bdcorlor: #eee !default;
 }
 
 
-a:hover{
+a:hover {
   text-decoration: none
 }
 
@@ -318,8 +317,8 @@ body {
         top: 10px;
       }
 
-      .links-of-author{
-        canvas, img, select, textarea, video,iframe  {
+      .links-of-author {
+        canvas, img, select, textarea, video, iframe {
           width: auto;
           max-width: 100%;
         }
@@ -593,8 +592,8 @@ body {
           z-index: -1;
         }
       }
-      
-      i{
+
+      i {
         position: absolute;
         color: #fa8d14;
         top: -3px;
@@ -604,7 +603,8 @@ body {
     }
 
     .nexmoe-post-meta {
-      a {
+      span {
+        cursor: pointer;
         border-radius: 10px;
         padding: 5px 10px;
         color: #fff;
@@ -616,9 +616,12 @@ body {
         .nexmoefont {
           font-size: 14px;
         }
+        a {
+          color: #fff;
 
-        &:before {
-          margin-right: 5px;
+          &:before {
+            margin-right: 5px;
+          }
         }
       }
 
@@ -626,7 +629,7 @@ body {
         margin-right: 5px;
       }
 
-      a {
+      span {
         &:nth-child(7n+1) {
           background-color: $red;
         }
@@ -1104,7 +1107,7 @@ article {
   }
 
   img {
-    display: block;
+    //display: block;
     border-radius: 6px;
     border: 1px solid $bdcorlor;
   }
@@ -1649,12 +1652,12 @@ font.douyin {
 }
 
 @media screen and (max-width: 1715px) {
-  .post__toc{
-    display: none!important;
+  .post__toc {
+    display: none !important;
   }
 }
 
-.vditor-copy span{
+.vditor-copy span {
   height: 20px;
   width: 20px;
 }

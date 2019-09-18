@@ -15,49 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-const getRealPath = (pathname, desc = false) => {
-    if (!pathname) {
-        pathname = window.location.pathname;
-    }
-    let names = pathname.split("/");
-    if (desc === false) {
-        for (let i = names.length - 1; i >= 0; --i) {
-            let name = names[i].trim();
-            if (name.length > 0 && name !== "/" && name !== "index.html") {
-                return name;
-            }
-        }
-    } else {
-        for (let i = 0; i < names.length; ++i) {
-            let name = names[i].trim();
-            if (name.length > 0 && name !== "/" && name !== "index.html") {
-                return name;
-            }
-        }
-    }
-    return "/";
-};
-
-const GetUrlRelativePath = (url) => {
-    let arrUrl = url.split("//");
-    let l = arrUrl.length
-    let relUrl = ""
-    if (l < 2) {
-        relUrl = arrUrl[l - 1]
-    } else {
-        let start = arrUrl[1].indexOf("/");
-        relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
-
-        if (relUrl.indexOf("?") != -1) {
-            relUrl = relUrl.split("?")[0];
-        }
-    }
-    if (relUrl.substr(0, 1) == "/" && relUrl != "/") {
-        relUrl = relUrl.slice(1)
-    }
-    return relUrl
-}
-
 $("table")
     .has("img")
     .addClass("nexmoe-album");

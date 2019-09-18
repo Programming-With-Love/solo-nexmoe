@@ -36,7 +36,7 @@
             ${statistic.statisticBlogViewCount}
         </div>
     </div>
-    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+    <ul class="nexmoe-list mdui-list header__nav" mdui-collapse="{accordion: true}">
         <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/" title="回到首页">
             <i class="mdui-list-item-icon iconfont solo-home"></i>
             <div class="mdui-list-item-content">回到首页</div>
