@@ -132,7 +132,7 @@
                                    href="${servePath}/category/${category.categoryURI}"
                                    title="${category.categoryTitle} - ${blogTitle}">
                                     ${category.categoryTitle}</a>
-                                <span class="category-list-count">${category.categoryTagCnt}</span>
+                                <span class="category-list-count">${category.categoryPublishedArticleCount}</span>
                             </li>
                         </#list>
                     </ul>
