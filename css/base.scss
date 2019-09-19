@@ -559,6 +559,9 @@ body {
       img {
         width: 100%;
         display: block;
+        max-height: 500px;
+        min-height: 65px;
+        object-fit: cover;
       }
 
       h1 {
