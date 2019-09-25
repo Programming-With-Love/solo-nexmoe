@@ -564,6 +564,9 @@ body {
         object-fit: cover;
       }
 
+
+
+
       h1 {
         position: absolute;
         bottom: 0;
@@ -1253,7 +1256,6 @@ article {
     display: inline-block;
     max-width: 100%;
     overflow: auto;
-    white-space: nowrap;
     margin: auto !important;
     border-radius: 6px;
 
@@ -1295,8 +1297,12 @@ article {
       border: none;
     }
 
+
     tr {
       background-color: #fff;
+      td:first-child, th:first-child {
+        white-space: nowrap;
+      }
 
       &:nth-child(2n) {
         background-color: #f8f8f8;
