@@ -565,8 +565,6 @@ body {
       }
 
 
-
-
       h1 {
         position: absolute;
         bottom: 0;
@@ -622,6 +620,7 @@ body {
         .nexmoefont {
           font-size: 14px;
         }
+
         a {
           color: #fff;
 
@@ -1300,6 +1299,7 @@ article {
 
     tr {
       background-color: #fff;
+
       td:first-child, th:first-child {
         white-space: nowrap;
       }
@@ -1665,13 +1665,23 @@ font.douyin {
     display: none !important;
   }
 }
+
 @media screen and (max-width: 1023px) {
-  tr {
-    td:first-child, th:first-child {
-      white-space: normal!important;
+  article {
+    table {
+      th, td {
+        padding: 0 !important;
+      }
+    }
+
+    tr {
+      td:first-child, th:first-child {
+        white-space: normal !important;
+      }
     }
   }
 }
+
 .vditor-copy span {
   height: 20px;
   width: 20px;
