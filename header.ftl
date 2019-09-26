@@ -17,7 +17,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<canvas id="c_n1" class="nexmoe-bg"></canvas>
+<#if customVars.bg??>
+    <div class="nexmoe-bg"
+         style="background-image:url(<#if customVars.bgUrl??>${customVars.bgUrl}<#else>${staticServePath}/skins/${skinDirName}/images/bg.jpg</#if>);opacity: .${customVars.bg};"></div>
+<#else>
+    <canvas id="c_n1" class="nexmoe-bg"></canvas>
+</#if>
 <div class="mdui-appbar mdui-shadow-0">
     <div class="mdui-toolbar">
         <a href="#" mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon">

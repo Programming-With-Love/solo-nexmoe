@@ -56,9 +56,7 @@ body {
 
 #nexmoe-background {
   .nexmoe-bg {
-    opacity: .2;
     background-size: cover;
-    filter: blur(30px);
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -232,7 +230,7 @@ body {
 
     .nexmoe-list-item {
       padding: 0 36px;
-      color: #9ca2a8;
+      color: #656565;
       transition: all .35s;
       border-radius: 10px;
       margin-bottom: 10px;
@@ -252,7 +250,7 @@ body {
 
       i {
         font-size: 22px;
-        color: #9ca2a8;
+        color: #656565;
       }
 
       .mdui-list-item-content {
@@ -1666,7 +1664,10 @@ font.douyin {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
+  .nexmoe-bg{
+    background: #fff !important;
+  }
   article {
     table {
       th, td {
