@@ -48,6 +48,8 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 
 * 快捷键`T`可直接返回顶部
 
+* 自定义背景：默认使用canvas作为背景，在后台管理 → 偏好设定 → 参数设置 → 自定义模板变量中新加参数`bg=*`,`*`对应0-9的数字，数字为透明度，`bg=1`对应`opacity: .1`。设置好后背景图片为[默认图片](https://img.hacpai.com/file/2019/09/57873300p0-3496bc81.jpg)。如需更改默认图片可新增参数`bgUrl=图片地址`，示例`bgUrl=https://static-solo.b3log.org/skins/Bubble/images/header-bg.jpg`
+
 * 后续添加中...
 
 
@@ -62,8 +64,8 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 
 
 ## 最后
-欢迎大家提issue，pr，以及点star
 
+欢迎大家提issue，pr，以及点star
 
 ## 更新通知
 
@@ -86,3 +88,6 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 * 2019-09-19：修复solo3.6.5出现的无法从首页登录后台问题
 
 * 2019-09-25：修复表格无法换行问题
+
+* 2019-09-26：添加用户自定义背景功能
+
