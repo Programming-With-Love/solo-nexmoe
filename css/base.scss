@@ -532,13 +532,12 @@ body {
       width: 100%;
       margin: 20px 0;
       border-radius: 10px;
-      box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
       background-color: #fff;
       padding: 20px 20px 0;
 
       article {
         padding: 10px 0;
-
+        box-shadow: none;
         p {
           &:first-child {
             margin-top: 0;
@@ -1024,7 +1023,6 @@ article {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 0 1rem rgba(161,177,204,0.4);
 
   .summary {
     overflow: hidden;
@@ -1036,6 +1034,7 @@ article {
 
   .vditor-reset {
     overflow: inherit;
+    margin-top: -20px;
   }
 
   p {
@@ -1687,15 +1686,16 @@ font.douyin {
 
 @media screen and (max-width: 1024px) {
   .nexmoe-bg {
-    background: #fff !important;
+    background: #fff!important;
   }
   .nexmoe-post{
     padding: 20px;
   }
-  .vditor-reset{
-    padding: 0!important;
-  }
   article {
+    padding: 0;
+    .vditor-reset {
+      margin-top: 0px;
+    }
     table {
       th, td {
         padding: 5px !important;
