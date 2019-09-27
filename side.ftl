@@ -36,29 +36,31 @@
             ${statistic.statisticBlogViewCount}
         </div>
     </div>
-    <ul class="nexmoe-list mdui-list header__nav" mdui-collapse="{accordion: true}">
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/" title="${blogTitle}">
-            <i class="mdui-list-item-icon iconfont solo-home"></i>
-            <div class="mdui-list-item-content">回到首页</div>
-        </a>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/links.html"
-           title="${linkLabel} - ${blogTitle}">
-            <i class="mdui-list-item-icon iconfont solo-list"></i>
-            <div class="mdui-list-item-content">${linkLabel}</div>
-        </a>
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/tags.html"
-           title="${tagLabel} - ${blogTitle}">
-            <i class="mdui-list-item-icon iconfont solo-tags"></i>
-            <div class="mdui-list-item-content">${tagLabel}</div>
-        </a>
-        <#list pageNavigations as page>
-            <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${page.pagePermalink}"
-               title="${page.pageTitle}" target="${page.pageOpenTarget}">
-                <i class="mdui-list-item-icon iconfont solo-${page.pageIcon}"></i>
-                <div class="mdui-list-item-content">${page.pageTitle}</div>
+    <div class="list-content">
+        <ul class="nexmoe-list mdui-list header__nav" mdui-collapse="{accordion: true}">
+            <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/" title="${blogTitle}">
+                <i class="mdui-list-item-icon iconfont solo-home"></i>
+                <div class="mdui-list-item-content">回到首页</div>
             </a>
-        </#list>
-    </ul>
+            <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/links.html"
+               title="${linkLabel} - ${blogTitle}">
+                <i class="mdui-list-item-icon iconfont solo-list"></i>
+                <div class="mdui-list-item-content">${linkLabel}</div>
+            </a>
+            <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${servePath}/tags.html"
+               title="${tagLabel} - ${blogTitle}">
+                <i class="mdui-list-item-icon iconfont solo-tags"></i>
+                <div class="mdui-list-item-content">${tagLabel}</div>
+            </a>
+            <#list pageNavigations as page>
+                <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="${page.pagePermalink}"
+                   title="${page.pageTitle}" target="${page.pageOpenTarget}">
+                    <i class="mdui-list-item-icon iconfont solo-${page.pageIcon}"></i>
+                    <div class="mdui-list-item-content">${page.pageTitle}</div>
+                </a>
+            </#list>
+        </ul>
+    </div>
     <aside id="nexmoe-sidebar">
 
         <div class="nexmoe-widget-wrap">

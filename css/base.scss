@@ -123,8 +123,11 @@ body {
   }
 
   .nexmoe-count {
-    padding: 0 30px;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
+    margin: 20px;
+    padding: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -134,11 +137,12 @@ body {
       -ms-flex: 1;
       flex: 1;
       text-align: center;
-      color: #444;
+      color: #a3a8ae;
 
       span {
         color: #363636;
         display: block;
+        margin-bottom: 3px;
       }
     }
   }
@@ -225,37 +229,44 @@ body {
     }
   }
 
-  .nexmoe-list {
-    padding: 8px 20px;
+  .list-content {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
 
-    .nexmoe-list-item {
-      padding: 0 36px;
-      color: #444;
-      transition: all .35s;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      text-align: center;
+    .nexmoe-list {
+      padding: 8px 20px;
 
-      &.active {
-        color: #fff;
+      .nexmoe-list-item {
+        padding: 0 36px;
+        color: #9ca2a8;
+        transition: all .35s;
+        border-radius: 10px;
+        margin: 10px 0;
+        text-align: center;
 
-        i {
+        &.active {
           color: #fff;
+
+          i {
+            color: #fff;
+          }
+
+          opacity: .9;
+          background: $red;
+          box-shadow: 0 2px 12px $red;
         }
 
-        opacity: .9;
-        background: $red;
-        box-shadow: 0 2px 12px $red;
-      }
+        i {
+          font-size: 22px;
+          color: #9ca2a8;
+        }
 
-      i {
-        font-size: 22px;
-        color: #444;
-      }
-
-      .mdui-list-item-content {
-        margin-left: 0;
-        transition: all .35s;
+        .mdui-list-item-content {
+          margin-left: 0;
+          transition: all .35s;
+        }
       }
     }
   }
@@ -380,7 +391,7 @@ body {
   .nexmoe-copyright {
     padding: 0 30px;
     text-align: right;
-    color: #444;
+    color: #777;
     white-space: normal;
     margin-bottom: 20px;
     font-size: 12px;
@@ -419,11 +430,9 @@ body {
   position: relative;
 
   .nexmoe-primary {
-    box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
-    background-color: #fff;
     float: left;
     width: 100%;
-    padding: 20px 20px 56px;
+    padding-bottom: 56px;
     position: absolute;
     min-height: 100vh;
 
@@ -468,6 +477,7 @@ body {
     }
 
     .links {
+      margin-top: 20px;
       ul {
         list-style-type: none;
         padding: 0;
@@ -520,7 +530,11 @@ body {
 
     .nexmoe-post {
       width: 100%;
-      margin-bottom: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
+      background-color: #fff;
+      padding: 20px 20px 0;
 
       article {
         padding: 10px 0;
@@ -605,6 +619,7 @@ body {
     }
 
     .nexmoe-post-meta {
+      margin-bottom: 10px;
       span {
         cursor: pointer;
         border-radius: 10px;
@@ -845,7 +860,6 @@ body {
   }
 
   .nexmoe-hitokoto {
-    margin: 0 -20px;
     padding: 21.5px 20px;
     text-align: center;
     background-color: #f5f6f5;
@@ -854,6 +868,9 @@ body {
     bottom: 0;
     width: 100%;
     height: 56px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     #hitokoto {
       font-size: 12px;
@@ -864,7 +881,7 @@ body {
 
   .back-to-top {
     font-size: 30px;
-    color: #9ca2a8;
+    color: #fff;
     position: fixed;
     bottom: 20px;
     margin-left: 970px
@@ -1004,6 +1021,10 @@ article {
   color: #444;
   font-family: microsoft yahei;
   margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(161,177,204,0.4);
 
   .summary {
     overflow: hidden;
@@ -1665,8 +1686,14 @@ font.douyin {
 }
 
 @media screen and (max-width: 1024px) {
-  .nexmoe-bg{
+  .nexmoe-bg {
     background: #fff !important;
+  }
+  .nexmoe-post{
+    padding: 20px;
+  }
+  .vditor-reset{
+    padding: 0!important;
   }
   article {
     table {
