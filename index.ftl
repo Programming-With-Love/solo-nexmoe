@@ -42,7 +42,7 @@
             <#if pjax><!---- pjax {#pjax} end ----></#if>
         </main>
 
-        <#if "" != noticeBoard>
+        <#if blogSubtitle??>
             <div class="nexmoe-hitokoto">
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
