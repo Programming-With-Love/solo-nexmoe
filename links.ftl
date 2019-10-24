@@ -60,7 +60,7 @@
                                 <li>
                                     <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
                                        rel="noopener">
-                                        <img src="https://avatars1.githubusercontent.com/u/23192332?v=4"
+                                        <img src="${link. linkIcon}"
                                              alt="${link.linkDescription}">
                                     </a>
                                 </li>
