@@ -80,8 +80,8 @@ var Skin = {
         if (firstP == undefined) {
             firstP = $("article p:eq(0) img:eq(0)").attr("src")
         }
-        if (headerImg == firstP) {
-            //$("article img:eq(0)").remove()
+        if (headerImg == firstP && headerImg != undefined) {
+            $("article img:eq(0)").remove()
         }
 
         if ($('.article__toc').length === 0) {
