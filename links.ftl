@@ -60,7 +60,7 @@
                                     <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
                                        rel="noopener">
                                         <img src="${link.linkIcon}"
-                                             alt="${link.linkDescription}">
+                                             alt="${link.linkTitle}">
                                     </a>
                                 </li>
                             </#list>
