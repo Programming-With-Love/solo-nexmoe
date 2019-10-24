@@ -56,10 +56,11 @@
                     <#else>
                         <ul>
                             <#list links as link>
+				<script>console.log(${link})</script>
                                 <li>
                                     <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
                                        rel="noopener">
-                                        <img src="${link.lineIcon}"
+                                        <img src="https://avatars1.githubusercontent.com/u/23192332?v=4"
                                              alt="${link.linkDescription}">
                                     </a>
                                 </li>
