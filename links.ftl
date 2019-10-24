@@ -59,7 +59,7 @@
                                 <li>
                                     <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
                                        rel="noopener">
-                                        <img src="${faviconAPI}<#list link.linkAddress?split('/') as x><#if x_index=2>${x}<#break></#if></#list>"
+                                        <img src="${link.lineIcon}"
                                              alt="${link.linkDescription}">
                                     </a>
                                 </li>
