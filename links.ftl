@@ -56,7 +56,6 @@
                     <#else>
                         <ul>
                             <#list links as link>
-				<script>console.log(${link})</script>
                                 <li>
                                     <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
                                        rel="noopener">
