@@ -57,10 +57,10 @@
                         <ul>
                             <#list links as link>
                                 <li>
-                                    <a href="${link.linkAddress}" title="${link.linkDescription}" target="_blank"
+                                    <a href="${link.linkAddress}" title="${link.linkTitle}" target="_blank"
                                        rel="noopener">
                                         <img src="${link.linkIcon}"
-                                             alt="${link.linkTitle}">
+                                             alt="${link.linkDescription}">
                                     </a>
                                 </li>
                             </#list>
