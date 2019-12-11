@@ -12,7 +12,7 @@ solo-nexmoe是移植Hexo的主题[Nexmoe](https://github.com/nexmoe/hexo-theme-n
 
 ## 演示
 
-* [墨殇的技术博客](https://www.jinjianh.com/?skin=solo-nexmoe)
+* [墨殇的技术博客](https://www.inkdp.cn/?skin=solo-nexmoe)
 * [鼠鼠在碎觉](https://sszsj.cc:444/?skin=solo-nexmoe)
 * [记录精彩的人生](https://witheloov.com/?skin=solo-nexmoe)
 * [邯城往事](https://www.cjzshilong.cn/?skin=solo-nexmoe)
