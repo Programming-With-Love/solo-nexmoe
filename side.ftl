@@ -20,7 +20,7 @@
 <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
         <a href="${servePath}/" title="${blogTitle}">
-            <img src="${adminUser.userAvatar}" title="${blogTitle}" alt="${userName}"></a>
+            <img src="${faviconURL}" title="${blogTitle}" alt="${userName}"></a>
     </div>
     <div class="nexmoe-count">
         <div>
