@@ -36,8 +36,6 @@ var Skin = {
                 $('body').removeClass('body--gray')
             }
             $('.header__nav a').each(function () {
-                console.log(this.href)
-                console.log(location.href)
                 if (this.href === location.href) {
                     this.className = 'active nexmoe-list-item mdui-list-item mdui-ripple'
                 }else{

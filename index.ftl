@@ -47,7 +47,11 @@
                 <p id="hitokoto">${blogSubtitle}</p>
             </div>
         </#if>
-        <div class="back-to-top iconfont solo-gotop" onclick="Util.goTop()"></div>
+        <#if customVars.bg??>
+            <div class="back-to-top iconfont solo-gotop" onclick="Util.goTop()"></div>
+        <#else>
+            <div class="back-to-top1 iconfont solo-gotop" onclick="Util.goTop()"></div>
+        </#if>
     </div>
 </div>
 <#include "footer.ftl">

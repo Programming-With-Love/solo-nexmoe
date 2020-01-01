@@ -63,13 +63,13 @@
                         <#if articleTag_index == 0>
                             <#if article.category??>
                                 <span>
-                            <a class="nexmoefont iconfont solo-category -link"
+                            <a class="nexmoefont iconfont solo-category "
                                href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
                 </span>
                             </#if>
                         </#if>
                         <span>
-                    <a class="nexmoefont iconfont solo-tag -link"
+                    <a class="nexmoefont iconfont solo-tag "
                        href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a>
                 </span>
                     </#list>
