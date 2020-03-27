@@ -40,7 +40,8 @@
                 </span>
                 <#if article.articleCommentCount != 0>
                     <span>
-                        <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
+                        <i class="nexmoefont iconfont solo-comment"></i>
+                        <b class="notb" data-uvstatcmt="${article.oId}">${article.articleCommentCount}</b>
                     </span>
                 </#if>
                 <#list article.articleTags?split(",") as articleTag>

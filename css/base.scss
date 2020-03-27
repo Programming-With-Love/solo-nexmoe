@@ -19,7 +19,7 @@
 @import "../../../scss/nprogress";
 @import "../../../scss/usite";
 @import "../../../scss/toc";
-@import "vditor/src/assets/scss/classic";
+@import "vditor/src/assets/scss/index";
 
 
 $red: #ff4e6a !default;
@@ -644,6 +644,9 @@ body {
             margin-right: 5px;
           }
         }
+        .notb{
+          font-weight: normal;
+        }
       }
 
       i:before {
@@ -722,8 +725,11 @@ body {
       }
     }
   }
-
-  .nexmoe-comment {
+  #vcomment{
+    padding: 30px 20px 20px !important;
+  }
+  .nexmoe-comment,
+  #vcomment{
     border-radius: 6px;
     background-color: #f5f6f5;
     padding: 20px;

@@ -20,15 +20,23 @@
 <#macro comments commentList article>
     <#if article.commentable || 0 != commentList?size>
         <div class="nexmoe-comment">
+            <div class="comment__title">
+                Responses
+            </div>
             <#if article.commentable>
-                <textarea rows="3" placeholder="评论内容只能为 2 到 500 个字符！" id="comment" readonly="readonly"></textarea>
+                <textarea rows="3" placeholder="Your comment here. Be cool. " id="comment"></textarea>
             </#if>
-            <ul class="comments" id="comments">
+
+            <ul id="comments">
                 <#list commentList as comment>
-                    <#include "common-comment.ftl"/>
+                    <#include 'common-comment.ftl'/>
                 </#list>
             </ul>
         </div>
     </#if>
 </#macro>
-
+<#---->
+<#--<#macro comments commentList article>-->
+<#--    -->
+<#--</#macro>-->
+<#---->

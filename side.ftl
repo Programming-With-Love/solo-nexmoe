@@ -28,10 +28,6 @@
             ${statistic.statisticPublishedBlogArticleCount}
         </div>
         <div>
-            <span>${commentLabel}</span>
-            ${statistic.statisticPublishedBlogCommentCount}
-        </div>
-        <div>
             <span>${viewLabel}</span>
             ${statistic.statisticBlogViewCount}
         </div>

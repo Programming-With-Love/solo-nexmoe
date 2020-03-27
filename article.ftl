@@ -56,8 +56,9 @@
                 </span>
                     <#if article.articleCommentCount != 0>
                         <span>
-                        <i class="nexmoefont iconfont solo-comment"></i>${article.articleCommentCount}
-                    </span>
+                        <i class="nexmoefont iconfont solo-comment"></i>
+                        <b class="notb" data-uvstatcmt="${article.oId}">${article.articleCommentCount}</b>
+                        </span>
                     </#if>
                     <#list article.articleTags?split(",") as articleTag>
                         <#if articleTag_index == 0>
@@ -92,7 +93,16 @@
                     <#include "../../common-template/toc.ftl"/>
                 </#if>
             </div>
-            <@comments commentList=articleComments article=article></@comments>
+            <#if commentable>
+                <div id="b3logsolocomments"></div>
+                <div id="vcomment" style="padding: 30px 0;" data-name="${article.authorName}" data-postId="${article.oId}"></div>
+                <#if !staticSite>
+                    <div id="soloComments" style="display: none;">
+                        <@comments commentList=articleComments article=article></@comments>
+                    </div>
+                </#if>
+            </#if>
+
             <#if pjax><!---- pjax {#pjax} end ----></#if>
         </main>
 
