@@ -644,9 +644,6 @@ body {
             margin-right: 5px;
           }
         }
-        .notb{
-          font-weight: normal;
-        }
       }
 
       i:before {
@@ -1736,4 +1733,7 @@ font.douyin {
     cursor: auto;
     max-width: 20px !important;
     vertical-align: sub;
+}
+.notb{
+  font-weight: normal!important;
 }

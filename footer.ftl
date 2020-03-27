@@ -34,3 +34,6 @@
         charset="utf-8"></script>
 <#include "../../common-template/label.ftl">
 ${plugins}
+<script>
+    console.clear();
+</script>

@@ -52,7 +52,8 @@
                 </span>
 
                     <span>
-                    <i class="nexmoefont iconfont solo-heat"></i>${article.articleViewCount} °C
+                    <i class="nexmoefont iconfont solo-heat"></i>
+                    <b class="notb" data-uvstaturl="${servePath}${article.articlePermalink}">${article.articleViewCount}</b> °C
                 </span>
                     <#if article.articleCommentCount != 0>
                         <span>
